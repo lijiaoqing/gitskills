@@ -1,0 +1,63 @@
+HB	: HeartBeat
+Heartbeat Agent: Terminal application in charge of contacting TMS for Heartbeat services
+IngEstate	: Ingenico Group’s TMS solution(安智集团的TMS解决方案)
+Telium	: Operating System used on Ingenico Terminals
+TETRA	: 3rd generation of Telium Terminals – Introduced since nov 2014.
+TMS	: Terminal Management System (Remote Terminal management system).
+
+操作步骤：
+1、输入cmd进命令行
+2、输入cd C:\Program Files\ingestate-server-8.0.2转到server的文件夹下
+3、输入start 按Tab键回车执行bat脚本启动server
+4、在浏览器地址栏输入http://localhost:8080/ie-web-mmi/ 运行demo
+
+<section name="$$$defaultSectionHeaders.test$$$" i18nBase="com.ingenico.webmmicore.presenter.i18n.i18nPresenter">
+
+		<item name="$$$plugin.title.text$$$" 
+			command="!com.ingenico.custowebmmi.plugin.ExamplePlugin"
+			i18nBase="com.ingenico.custowebmmi.plugin.ExamplePluginView" />
+
+		<item name="$$$plugin.title.text$$$" 
+			command="!com.ingenico.webmmigaud.vaadin.GeneralAuditsPlugin"
+			i18nBase="com.ingenico.custowebmmi.plugin.ExamplePluginView" />
+	</section>
+
+桌面版的安装步骤：
+1、执行build.xml文件生成jar包在release文件夹下面
+2、copy jar包到ingestate-server-8.0.2下面的lib文件夹下
+3、在ingestate-server-8.0.2/config/users/swing/下面的相应的角色的属性文件中修改downloadManager.customTerminalPropertiesComponents
+的值为相应的添加的tab的jar包内的路径
+
+桌面版的总结：
+Tab名称的资源文件 tp.tabDisplayName=Custom Properties Tab  
+获取名称在CustomTerminalPropertiesTab.java中的338行 
+          public String getDisplayName(){     
+			return CustomUtilities.resourceBundle.getString("tp.tabDisplayName");
+			}
+PostgreSQL:
+用户名：postgres
+密码：root
+
+dashboard api confluence的地址
+https://ussnprdevapp5:8443/display/PRJRPT/2015/06/05/Dashboard+APIS
+
+The first part of the 8.4 features development is:
+
+Dashboard: 
+?	Run report
+?	Change alert status
+?	Read access to database terminals
+?	Show alert status
+
+Terminal:
+?	Heartbeat agent (limited to “I’am alive status”)
+?	Interface with application
+?	Interface with OS & SDK
+
+Hearbeat (limited to “I’am alive status”)
+?	Protocol
+?	Application + data model
+?	Dashboard for missing Terminals
+
+输出命令行的内容命令是：
+>文件名 例如>log.txt
