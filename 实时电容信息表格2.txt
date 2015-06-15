@@ -1,0 +1,189 @@
+
+								{
+									name : '',
+									editable : false,
+									width : 50,
+									align : "center",
+									formatter : function(cellvalue, options,
+											rowObject) {
+										if (rowObject.license.indexOf('A0001') != -1
+												|| rowObject.license
+														.indexOf('A0002') != -1) {
+											return "";
+										}
+										if (rowObject.total_volt >= 230) {
+											return '<img src="'
+													+ base
+													+ '/resources/images/red.png"  alt="no picture" />';
+										} else if (rowObject.total_volt >= 222) {
+											return '<img src="'
+													+ base
+													+ '/resources/images/yellow.png"  alt="no picture" />';
+										} else {
+											return '<img src="'
+													+ base
+													+ '/resources/images/offline.png"  alt="no picture" />';
+										}
+									}
+								},
+								{
+									name : 'license',
+									editable : false,
+									align : "center",
+								},
+								{
+									name : '',
+									sortable : false,
+									editable : false,
+									align : "center",
+									formatter : function(cellvalue, options,
+											rowObject) {
+										if (rowObject.total_volt >= 222) {
+											return '御少';
+										} else {
+											return '少御';
+										}
+									}
+								},
+								{
+									name : 'update_time',
+									sortable : false,
+									editable : false,
+									align : "center",
+									formatter : function(v) {
+										if (v != null) {
+											return (new Date(v))
+													.toString('yyyy-MM-dd HH:mm:dd');
+										} else {
+											return "";
+										}
+										;
+									}
+								},
+								{
+									name : '',
+									sortable : false,
+									editable : false,
+									align : "center",
+									formatter : function(cellvalue, options,
+											rowObject) {
+										if (rowObject.total_volt >= 230) {
+											return '御少<img src="'
+													+ base
+													+ '/resources/images/alarm_up.png"  alt="no picture" />';
+										} else if (rowObject.total_volt >= 222) {
+											return '御少<img src="'
+													+ base
+													+ '/resources/images/alarm_down.png"  alt="no picture" />';
+										} else if (rowObject.total_volt >= 207) {
+											return '少御<img src="'
+													+ base
+													+ '/resources/images/warning_up.png"  alt="no picture" />';
+										} else {
+											return '少御<img src="'
+													+ base
+													+ '/resources/images/warning_down.png"  alt="no picture" />';
+										}
+									}
+								},
+								{
+									name : 'total_volt',
+									sortable : false,
+									editable : false,
+									align : "center",
+									formatter : function(cellvalue, options,
+											rowObject) {
+										if (rowObject.total_volt >= 230) {
+											return rowObject.total_volt
+													+ '<img src="'
+													+ base
+													+ '/resources/images/alarm_up.png"  alt="no picture" />';
+										} else if (rowObject.total_volt >= 222) {
+											return rowObject.total_volt
+													+ '<img src="'
+													+ base
+													+ '/resources/images/alarm_down.png"  alt="no picture" />';
+										} else if (rowObject.total_volt >= 207) {
+											return rowObject.total_volt
+													+ '<img src="'
+													+ base
+													+ '/resources/images/warning_up.png"  alt="no picture" />';
+										} else {
+											return rowObject.total_volt
+													+ '<img src="'
+													+ base
+													+ '/resources/images/warning_down.png"  alt="no picture" />';
+										}
+									}
+								},
+								{
+									name : 'total_ampere',
+									sortable : false,
+									editable : false,
+									align : "center"
+								},
+								{
+									name : 'temperature',
+									sortable : false,
+									editable : false,
+									align : "center",
+									formatter : function(cellvalue, options,
+											rowObject) {
+										if (rowObject.total_volt >= 230) {
+											return rowObject.temperature
+													+ '<img src="'
+													+ base
+													+ '/resources/images/alarm_up.png"  alt="no picture" />';
+										} else if (rowObject.total_volt >= 222) {
+											return rowObject.temperature
+													+ '<img src="'
+													+ base
+													+ '/resources/images/alarm_down.png"  alt="no picture" />';
+										} else if (rowObject.total_volt >= 207) {
+											return rowObject.temperature
+													+ '<img src="'
+													+ base
+													+ '/resources/images/warning_up.png"  alt="no picture" />';
+										} else {
+											return rowObject.temperature
+													+ '<img src="'
+													+ base
+													+ '/resources/images/warning_down.png"  alt="no picture" />';
+										}
+									}
+								},
+								{
+									name : 'temperature',
+									sortable : false,
+									editable : false,
+									align : "center",
+									formatter : function(cellvalue, options,
+											rowObject) {
+										if (rowObject.total_volt >= 230) {
+											return rowObject.temperature
+													+ '<img src="'
+													+ base
+													+ '/resources/images/alarm_up.png"  alt="no picture" />';
+										} else if (rowObject.total_volt >= 222) {
+											return rowObject.temperature
+													+ '<img src="'
+													+ base
+													+ '/resources/images/alarm_down.png"  alt="no picture" />';
+										} else if (rowObject.total_volt >= 207) {
+											return rowObject.temperature
+													+ '<img src="'
+													+ base
+													+ '/resources/images/warning_up.png"  alt="no picture" />';
+										} else {
+											return rowObject.temperature
+													+ '<img src="'
+													+ base
+													+ '/resources/images/warning_down.png"  alt="no picture" />';
+										}
+									}
+								}, {
+									name : 'temperature',
+									sortable : false,
+									editable : false,
+									align : "center"
+								} 
